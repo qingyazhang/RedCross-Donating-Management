@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>final</display-name>
+ 	<servlet>
+		<servlet-name>testImage</servlet-name>
+		<servlet-class>com.testImage</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>logConfir</servlet-name>
+		<servlet-class>com.logConfir</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>test</servlet-name>
+		<servlet-class>com.test</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>queryDonate</servlet-name>
+		<servlet-class>com.queryDonate</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>queryAccept</servlet-name>
+		<servlet-class>com.queryAccept</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>queryAccept</servlet-name>
+		<url-pattern>/queryAccept.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>queryDonate</servlet-name>
+		<url-pattern>/queryDonate.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/testtemp</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet-mapping>
+		<servlet-name>testImage</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>logConfir</servlet-name>
+		<url-pattern>/confirm</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+  <resource-ref>
+    <description>MySQL Datasource</description>
+    <res-ref-name>jdbc/redcross</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  
+
+  
+  
+</web-app>
